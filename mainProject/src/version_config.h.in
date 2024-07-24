@@ -1,0 +1,15 @@
+#ifndef VERSION_CONFIG_H
+#define VERSION_CONFIG_H
+
+#ifdef MAINPROJECT_VERSION
+    #undef MAINPROJECT_VERSION
+#endif
+
+#define MAINPROJECT_VERSION "@CMAKE_PROJECT_VERSION@"
+
+constexpr const char* getLibInterfaceVersion()
+{
+    return "@CMAKE_PROJECT_VERSION@";
+}
+
+#endif // VERSION_CONFIG_H
